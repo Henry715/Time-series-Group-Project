@@ -1,2 +1,6 @@
 *.pdf
 .vscode/
+trained_model/*.pth
+__pycache__/*
+UCR_TS_Archive_2015/*
+UCRArchive_2018/*
