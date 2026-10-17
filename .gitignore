@@ -1,2 +1,4 @@
 *.pdf
 .vscode/
+trained_model/*.pth
+__pycache__/*

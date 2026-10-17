@@ -15,13 +15,13 @@ class FCN(nn.Module):
 
         self.layers = nn.Sequential(
             nn.Conv1d(in_channels=in_channels, out_channels=128, kernel_size=8, stride=1, padding="same"),
-            nn.BatchNorm1d(128, eps=0.001, momentum=0.99),
+            nn.BatchNorm1d(128, eps=0.001, momentum=0.01),
             nn.ReLU(),
             nn.Conv1d(in_channels=128, out_channels=256, kernel_size=5, stride=1, padding="same"),
-            nn.BatchNorm1d(256, eps=0.001, momentum=0.99),
+            nn.BatchNorm1d(256, eps=0.001, momentum=0.01),
             nn.ReLU(),
             nn.Conv1d(in_channels=256, out_channels=128, kernel_size=3, stride=1, padding="same"),
-            nn.BatchNorm1d(128, eps=0.001, momentum=0.99),
+            nn.BatchNorm1d(128, eps=0.001, momentum=0.01),
             nn.ReLU(),
             nn.AdaptiveAvgPool1d(1),
             nn.Flatten(),
