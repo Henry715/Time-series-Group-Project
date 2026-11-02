@@ -1,0 +1,25 @@
+\begin{table*}[htbp]
+\caption{Performance of the FCN Variants on the FordA Test Set}
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Model} & \textbf{Checkpoint (epoch)} & \textbf{Train Acc.}$^{\mathrm{c}}$ & \textbf{Test Acc.} & \textbf{95\% CI}$^{\mathrm{e}}$ & \textbf{Precision}$^{\mathrm{a}}$ & \textbf{Recall}$^{\mathrm{a}}$ & \textbf{F1}$^{\mathrm{a}}$ & \textbf{Test Loss} & \textbf{AUC}$^{\mathrm{b}}$ \\
+\hline
+FCN (baseline) & Train loss (1906) & 0.9608 & 0.9273 & [0.912, 0.940] & 0.9276 & 0.9279 & 0.9273 & 0.1992 & 0.9787 \\
+\hline
+FCN + z-score & Train loss (1899) & 0.9545 & 0.9205 & [0.905, 0.934] & 0.9216 & 0.9215 & 0.9205 & 0.2254 & 0.9769 \\
+\hline
+FCN-Opt & Train loss (408) & 0.9994$^{\mathrm{d}}$ & 0.8909 & [0.873, 0.907] & 0.9015 & 0.8884 & 0.8896 & 0.6632 & -- \\
+\hline
+FCN-Opt + ES & Val. loss (11) & 0.9309 & 0.9227 & [0.907, 0.936] & 0.9241 & 0.9238 & 0.9227 & 0.2045 & 0.9781 \\
+\hline
+\multicolumn{10}{l}{$^{\mathrm{a}}$Macro-averaged over the two classes. Test set: 1320 series.} \\
+\multicolumn{10}{l}{$^{\mathrm{b}}$Not available for FCN-Opt because its checkpoint is not in the repository.} \\
+\multicolumn{10}{l}{$^{\mathrm{c}}$Final weights evaluated in inference mode on the model's own training data (3601 series; FCN-Opt + ES: 3240 after the validation split).} \\
+\multicolumn{10}{l}{$^{\mathrm{d}}$Running accuracy from the training log (weights unavailable for re-evaluation).} \\
+\multicolumn{10}{l}{$^{\mathrm{e}}$Wilson interval for test accuracy. Versus the baseline: FCN + z-score $p=0.19$, FCN-Opt + ES $p=0.51$ (exact McNemar test);} \\
+\multicolumn{10}{l}{\phantom{$^{\mathrm{e}}$}FCN-Opt $p=0.001$ (two-proportion $z$-test, as its predictions are unavailable).}
+\end{tabular}
+\label{tab:results}
+\end{center}
+\end{table*}
