@@ -1,0 +1,89 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+\title{Layout Check: FCN on FordA}
+\author{\IEEEauthorblockN{Test}\IEEEauthorblockA{UCD}}
+\maketitle
+\begin{abstract}\lipsum[1][1-5]\end{abstract}
+\section{Introduction}
+\showthe\columnwidth \showthe\textwidth
+\lipsum[2-3]
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{figures/fig0_dataset}
+\caption{FordA dataset: (a) one training series per class; (b) class-wise amplitude spectrum.}
+\label{fig:fig0_dataset}
+\end{figure}
+
+\section{Results}
+\lipsum[4]
+\input{figures/table_results}
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/fig1_performance}
+\caption{Test-set performance of the four FCN variants.}
+\label{fig:fig1_performance}
+\end{figure*}
+\lipsum[5-6]
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{figures/fig3_early_stopping}
+\caption{Training of FCN-Opt with early stopping.}
+\label{fig:fig3_early_stopping}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{figures/fig5_confusion}
+\caption{Confusion matrices on the FordA test set.}
+\label{fig:fig5_confusion}
+\end{figure}
+\lipsum[7-8]
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/fig2_training_curves}
+\caption{Training curves over 2000 epochs.}
+\label{fig:fig2_training_curves}
+\end{figure*}
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/fig4_optuna}
+\caption{Optuna hyperparameter search.}
+\label{fig:fig4_optuna}
+\end{figure*}
+\lipsum[9-12]
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/fig6_cam}
+\caption{Class activation maps.}
+\label{fig:fig6_cam}
+\end{figure*}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{figures/fig7_cam_quant}
+\caption{Quantitative CAM analysis over all 1320 test series.}
+\label{fig:fig7_cam_quant}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{figures/fig6b_cam_errors}
+\caption{CAM of misclassified samples.}
+\label{fig:fig6b_cam_errors}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{figures/figX_tsne}
+\caption{t-SNE of GAP features.}
+\label{fig:figX_tsne}
+\end{figure}
+\lipsum[13-18]
+\end{document}
