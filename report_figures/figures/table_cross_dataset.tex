@@ -1,0 +1,28 @@
+% Cross-dataset comparison (FordA values from Table III; FordB and Adiac from multi_dataset/runs/summary.csv).
+\begin{table*}[htbp]
+\caption{Test Error on FordA, FordB and Adiac}
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Dataset} & \textbf{FCN (baseline)} & \textbf{FCN-Opt + ES}$^{\mathrm{a}}$ & \textbf{McNemar $p$}$^{\mathrm{b}}$ & \textbf{Selected epoch}$^{\mathrm{c}}$ \\
+\hline
+FordA & 0.0727 & 0.0773 & 0.51 & 1,906 / 11 \\
+\hline
+FordB & 0.2074 & 0.1877 & 0.16 & 1,966 / 20 \\
+\hline
+Adiac$^{\mathrm{d}}$ & 0.2600 $\pm$ 0.0873 & 0.1731 $\pm$ 0.0199 & 0.66 / $<$0.001 / 0.002 & 1,953--1,995 / 691--1,030 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{1mm}
+\begin{minipage}{\textwidth}
+\footnotesize
+Training / test series: FordA 3,601 / 1,320 and FordB 3,636 / 810 (two classes each); Adiac 390 / 391 (37 classes).
+FCN + z-score and full-budget FCN-Opt were evaluated on FordA only.
+$^{\mathrm{a}}$Hyperparameters from a separate Optuna search on each dataset's training data. Stopping: FordA validation accuracy $\geq 0.93$; FordB and Adiac patience on validation loss (15 and 139 epochs).
+$^{\mathrm{b}}$Exact McNemar test, FCN-Opt + ES versus baseline on the same test series; for Adiac, one test per seed (42 / 43 / 44).
+$^{\mathrm{c}}$Checkpoint epoch, baseline / FCN-Opt + ES. The baseline always trained for 2,000 epochs.
+$^{\mathrm{d}}$Mean $\pm$ sample standard deviation over training seeds 42, 43 and 44. Per seed: baseline 0.1688, 0.3427, 0.2685; FCN-Opt + ES 0.1790, 0.1509, 0.1893. FordA and FordB use seed 42 only.
+\end{minipage}
+\label{tab:cross_dataset}
+\end{table*}

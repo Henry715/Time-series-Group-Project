@@ -1,0 +1,23 @@
+{
+  "dataset": "Adiac",
+  "model": "1NN-DTW",
+  "variant": "dtw1nn-w0.01",
+  "run": "dtw1nn-w0.01",
+  "n_classes": 37,
+  "length": 176,
+  "n_train_fit": 390,
+  "window": 0.01,
+  "n_test": 391,
+  "n_correct": 251,
+  "test_acc": 0.6419437340153452,
+  "test_error": 0.3580562659846548,
+  "acc_ci95_low": 0.5932535094499549,
+  "acc_ci95_high": 0.6878719841381118,
+  "precision_macro": 0.6688266404378936,
+  "recall_macro": 0.651354688854689,
+  "f1_macro": 0.6325885752894771,
+  "auc": null,
+  "seconds": 0.0,
+  "aeon": "1.6.0",
+  "python": "3.12.16"
+}
