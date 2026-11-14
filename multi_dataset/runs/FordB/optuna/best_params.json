@@ -1,0 +1,57 @@
+{
+  "dataset": "FordB",
+  "best_trial": 25,
+  "objective": "validation macro F1",
+  "value": 0.9559788359788359,
+  "fold_f1": [
+    0.9559788359788359
+  ],
+  "fold_best_epoch": [
+    55
+  ],
+  "params": {
+    "filters1": 256,
+    "filters2": 128,
+    "filters3": 128,
+    "kernel1": 16,
+    "kernel2": 10,
+    "kernel3": 3,
+    "learning_rate": 0.0020531809712434888,
+    "batch_size": 128,
+    "weight_decay": 1e-06,
+    "optimizer": "Adam"
+  },
+  "config": {
+    "arch": "FCN_tune",
+    "filters": [
+      256,
+      128,
+      128
+    ],
+    "kernels": [
+      16,
+      10,
+      3
+    ],
+    "optimizer": "Adam",
+    "lr": 0.0020531809712434888,
+    "weight_decay": 1e-06,
+    "batch_size": 128
+  },
+  "cv_folds": 0,
+  "n_fit": 3272,
+  "budget": {
+    "max_epochs": 100,
+    "patience": 15,
+    "warmup": 50,
+    "interval": 10
+  },
+  "n_trials": 50,
+  "n_complete": 49,
+  "n_pruned": 1,
+  "search_seconds_this_run": 10760.6,
+  "device": "mps",
+  "torch": "2.14.1",
+  "optuna": "5.0.0",
+  "python": "3.12.16"
+}
